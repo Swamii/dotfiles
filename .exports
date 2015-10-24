@@ -36,6 +36,10 @@ if [ `id -u` != '0' ]; then
     fi
 fi
 
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # Prevent python from creating .pyc-files
 export PYTHONDONTWRITEBYTECODE=1
 

@@ -25,11 +25,11 @@
 	purr = pull --rebase
 
 [user]
-	name = Hannes Ljungberg
-	email = hannes@5monkeys.se
+	name = Akseli Nelander
+	email = anelander@gmail.com
 
 [github]
-	user = hannseman
+	user = Swamii
 
 [core]
 	# Use custom `.gitignore` and `.gitattributes`

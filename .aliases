@@ -1,5 +1,9 @@
 # Shortcuts
-alias p="cd ~/dev/5monkeys"
+alias p="cd ~/dev/django_projects"
+alias gx="gitx"
+
+# Get OS X Software Updates, and update Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -51,5 +55,5 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Remove pyc-files recursively
 alias pycclean="find . -name '*.pyc' -delete"
 
-alias mach="source dockermachinewrapper.sh"
+alias dockr="source dockermachinewrapper.sh"
 

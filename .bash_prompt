@@ -59,23 +59,23 @@ prompt_git() {
 }
 
 function prompt_virtualenv(){
-		local venv='';
-    # Get Virtual Env
-    if [[ -n "$VIRTUAL_ENV" ]]; then
-        # Strip out the path and just leave the env name
-        venv="${VIRTUAL_ENV##*/}";
-    fi
-    [[ -n "$venv" ]] && echo "(venv:$venv) ";
+	local venv='';
+	# Get Virtual Env
+	if [[ -n "$VIRTUAL_ENV" ]]; then
+		# Strip out the path and just leave the env name
+		venv="${VIRTUAL_ENV##*/}";
+	fi
+	[[ -n "$venv" ]] && echo "(venv:$venv) ";
 }
 
 function prompt_docker(){
-		local docker='';
-    # Get docker machine
-    if [[ -n "$DOCKER_MACHINE_NAME" ]]; then
-        # Strip out the path and just leave the env name
-        docker="${DOCKER_MACHINE_NAME}";
-    fi
-    [[ -n "$docker" ]] && echo "(docker:$docker) ";
+	local docker='';
+	# Get docker machine
+	if [[ -n "$DOCKER_MACHINE_NAME" ]]; then
+		# Strip out the path and just leave the env name
+		docker="${DOCKER_MACHINE_NAME}";
+	fi
+	[[ -n "$docker" ]] && echo "(docker:$docker) ";
 }
 
 
@@ -127,7 +127,7 @@ fi
 if [[ "${USER}" == "root" ]]; then
 	userStyle="${red}";
 else
-	userStyle="${magenta}";
+	userStyle="${orange}";
 fi;
 
 # Highlight the hostname when connected via SSH.
@@ -143,13 +143,13 @@ function bash_prompt(){
 	prompt+="\[${cyan}\]$(prompt_docker)";
 	prompt+="\[${cyan}\]$(prompt_virtualenv)";
 	prompt+="\[${userStyle}\]\u"; # username
-	prompt+="\[${white}\] at ";
-	prompt+="\[${hostStyle}\]\h"; # host
-	prompt+="\[${white}\] in ";
+	# prompt+="\[${reset}\] at ";
+	# prompt+="\[${hostStyle}\]\h"; # host
+	prompt+="\[${reset}\] in ";
 	prompt+="\[${green}\]\w"; # working directory
-	prompt+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
+	prompt+="\$(prompt_git \"${reset} on ${violet}\")"; # Git repository details
 	prompt+="\n";
-	prompt+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+	prompt+="\[${reset}\]\$ "; # `$` (and reset color)
 	[[ -n "${prompt}" ]] && echo -e "${prompt}";
 }
 export PS1="$(bash_prompt)";

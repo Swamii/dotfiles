@@ -1,3 +1,6 @@
+# Local settings file
+local_akseli.py
+
 # Compiled Python files
 *.pyc
 
