@@ -138,13 +138,9 @@ else
 fi;
 
 function bash_prompt(){
-	# Set the terminal title to the current working directory.
-	local prompt="\[\033]0;\w\007\]";
-	prompt+="\[${cyan}\]$(prompt_docker)";
+	local prompt="\[${cyan}\]$(prompt_docker)";
 	prompt+="\[${cyan}\]$(prompt_virtualenv)";
 	prompt+="\[${userStyle}\]\u"; # username
-	# prompt+="\[${reset}\] at ";
-	# prompt+="\[${hostStyle}\]\h"; # host
 	prompt+="\[${reset}\] in ";
 	prompt+="\[${green}\]\w"; # working directory
 	prompt+="\$(prompt_git \"${reset} on ${violet}\")"; # Git repository details
