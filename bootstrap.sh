@@ -5,7 +5,14 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "LICENSE" --exclude "README.md" -avh --no-perms . ~;
+	rsync --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude "bootstrap.sh" \
+		--exclude "LICENSE" \
+		--exclude "README.md" \
+		--exclude "Quiver-settings.json" \
+		--exclude "com.googlecode.iterm2.plist" \
+		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
