@@ -40,6 +40,9 @@ fi
 eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 
+# https://github.com/yyuu/pyenv-virtualenvwrapper
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
 # Activate rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
