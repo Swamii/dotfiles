@@ -25,6 +25,9 @@ export LESS='RSXin'
 
 # Add postgres.app libraries on fallback path
 export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:/usr/local/lib:$DYLD_FALLBACK_LIBRARY_PATH
+# Activate pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Setup virtualenvwrapper
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
@@ -35,10 +38,6 @@ if [ `id -u` != '0' ]; then
         source $VIRTUALENVWRAPPER_SCRIPT
     fi
 fi
-
-# Activate pyenv
-eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
 
 # https://github.com/yyuu/pyenv-virtualenvwrapper
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
