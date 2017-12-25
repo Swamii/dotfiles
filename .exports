@@ -23,8 +23,6 @@ export GREP_OPTIONS='--color=auto';
 # Long lines chopped, ignore case on all lower case searches, no line number counting
 export LESS='RSXin'
 
-# Add postgres.app libraries on fallback path
-export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:/usr/local/lib:$DYLD_FALLBACK_LIBRARY_PATH
 # Activate pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
