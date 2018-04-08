@@ -1,7 +1,7 @@
-# Shortcuts
-alias p="cd ~/dev/django_projects"
 # Git fork
 alias fork='function _fork(){ open $1 -a /Applications/Fork.app; };_fork'
+
+alias jump=wd
 
 # alias docker-dangerous-cleanup="docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker ps -a | cut -c-12 | xargs docker rm"
 alias docker-slow-restart='docker-compose stop && sleep 5 && docker-compose up -d && notify "Docker was restarted in $(basename $(pwd))" || notify "Could not restart docker"'

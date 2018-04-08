@@ -26,19 +26,8 @@ export LESS='RSXin'
 # Activate pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-# Setup virtualenvwrapper
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.virtualenvwrapper
-if [ `id -u` != '0' ]; then
-    if [ -f $VIRTUALENVWRAPPER_SCRIPT ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source $VIRTUALENVWRAPPER_SCRIPT
-    fi
-fi
-
-# https://github.com/yyuu/pyenv-virtualenvwrapper
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+# Disable virtualenv prompt (handled by zsh theme)
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Activate rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
