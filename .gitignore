@@ -1,6 +1,9 @@
 # Local settings file
 local_akseli.py
 
+# Pyenv local file
+.python-version
+
 # Compiled Python files
 *.pyc
 
