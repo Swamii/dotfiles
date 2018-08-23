@@ -13,6 +13,7 @@ function doIt() {
 		--exclude "Quiver-settings.json" \
 		--exclude "com.googlecode.iterm2.plist" \
 		--exclude ".oh-my-zsh" \
+		--exclude "brew.sh" \
 		-avh --no-perms . ~;
 	source ~/.zshrc;
 }

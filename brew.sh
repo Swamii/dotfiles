@@ -67,6 +67,9 @@ brew install fastlane
 brew install carthage
 brew install cocoapods
 brew install pipenv
+brew install pyenv
+brew install pyenv-virtualenv
+brew install direnv
 
 # Remove outdated versions from the cellar.
 brew cleanup

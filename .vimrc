@@ -1,9 +1,3 @@
-" Colors
-syntax enable           " enable syntax processing
-set background=light
-let g:solarized_termtrans=0
-colorscheme solarized
-
 " Vundle plugins
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,8 +5,19 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
+
+" Colors
+syntax enable           " enable syntax processing
+set termguicolors
+set background=light
+
+colorscheme solarized
+
+" let ayucolor="light"
+" colorscheme ayu
 
 " Misc
 set ttyfast                     " faster redraw
