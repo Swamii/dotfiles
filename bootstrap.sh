@@ -16,6 +16,11 @@ function doIt() {
 		--exclude "brew.sh" \
 		-avh --no-perms . ~;
 	source ~/.zshrc;
+
+	# Configure tmux
+	if which tmux > /dev/null; then
+		tmux source-file ~/.tmux.conf
+	fi;
 }
 
 if [ "$1" = "--force" -o "$1" = "-f" ]; then
@@ -30,4 +35,5 @@ fi;
 unset doIt;
 
 cd -
+
 

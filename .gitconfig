@@ -24,6 +24,7 @@
     co = checkout
 	uncommit = reset HEAD^
 	purr = pull --rebase
+    up = pull --rebase --autostash
 
 [user]
 	name = Akseli Nelander

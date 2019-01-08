@@ -12,10 +12,10 @@ function notify {
 }
 
 function docker_logs {
-    while true; do 
-        docker-compose logs -f --tail=50 $@; 
-        echo "Restarting logs in 5..."; 
-        sleep 5; 
+    while true; do
+        docker-compose logs -f --tail=50 "$@";
+        echo "Restarting logs in 5...";
+        sleep 5;
     done
 }
 

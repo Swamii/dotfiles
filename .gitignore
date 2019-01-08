@@ -7,6 +7,9 @@ local_akseli.py
 # Compiled Python files
 *.pyc
 
+# Direnv
+.envrc
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini

@@ -49,3 +49,10 @@ export VBOX_INSTALL_PATH=/Applications/VirtualBox.app/Contents/MacOS
 
 # Prevent shell exit with CTRL-d
 export IGNOREEOF=1
+
+# Instantclient
+export ORACLE_HOME=$HOME/bin/instantclient_12_1
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export PKG_CONFIG_PATH=$ORACLE_HOME
+

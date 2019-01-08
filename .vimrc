@@ -5,7 +5,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'ayu-theme/ayu-vim'
+" Plugin 'ayu-theme/ayu-vim'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'kh3phr3n/python-syntax'
+Plugin 'Yggdroot/indentLine'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 
@@ -14,7 +19,7 @@ syntax enable           " enable syntax processing
 set termguicolors
 set background=light
 
-colorscheme solarized
+colorscheme solarized8
 
 " let ayucolor="light"
 " colorscheme ayu
@@ -73,6 +78,12 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" Buffer movement in insert mode
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
 " Backups
 set backup
 set backupdir=~/.vim/backups
@@ -84,3 +95,10 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
+
+" IndentLine
+let g:indentLine_char = '│'
+let g:indentLine_first_char = '│'
+let g:indentLine_showFirstIndentLevel = 1
+" let g:indentLine_setColors = 0
+
