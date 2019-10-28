@@ -84,6 +84,10 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+:let mapleader = ","
+:map <leader>y "0y
+:map <leader>p "0p
+
 " Backups
 set backup
 set backupdir=~/.vim/backups

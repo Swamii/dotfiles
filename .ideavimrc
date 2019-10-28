@@ -11,5 +11,16 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+" Map <leader> to ,
+:let mapleader = ","
+
+" Yank and paste into a non-default register
+:map <leader>y "0y
+:map <leader>p "0p
+
 " Activate vim-surround
 set surround
+" Activate vim-multiple-cursors
+set multiple-cursors
+" Activate ideajoin (better 'J'): https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
+set ideajoin
