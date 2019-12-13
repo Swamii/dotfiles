@@ -26,13 +26,6 @@
 	purr = pull --rebase
     up = pull --rebase --autostash
 
-[user]
-	name = Akseli Nelander
-	email = anelander@gmail.com
-
-[github]
-	user = Swamii
-
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore

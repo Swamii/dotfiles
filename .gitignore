@@ -28,3 +28,6 @@ Thumbs.db
 # Coverage
 .coverage
 htmlcov/
+
+# Extra file with hidden stuff
+.extra
