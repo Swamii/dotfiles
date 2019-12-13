@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [ -n "$PS1" ]; then
     # Skip if shell is not interactive
-    for file in ~/.{path,exports,aliases,functions,projects}; do
+    for file in ~/.{path,exports,aliases,functions,extra,projects}; do
         [ -r "$file" ] && source "$file"
     done
     unset file
