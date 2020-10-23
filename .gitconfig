@@ -63,6 +63,9 @@
 	remote = origin
 	merge = refs/heads/master
 
+[pull]
+    rebase = true
+
 # URL shorthands
 [url "git@github.com:"]
 	insteadOf = "gh:"
